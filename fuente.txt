@@ -1,0 +1,4 @@
+print "Hola mundo";
+x = 23 + 5;
+y = "cadena de texto";
+z = x + 10;
