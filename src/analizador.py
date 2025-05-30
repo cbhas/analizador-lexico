@@ -1,15 +1,20 @@
 import re
 
+# Palabras reservadas de tu lenguaje
+palabras_reservadas = {
+    "start_main", "endmain", "var", "int", "string", "bool", "double", "true", "false",
+    "if", "endif", "loop", "endloop", "show"
+}
+
 # Tokens y sus expresiones regulares
 tokens = [
-    ("ID", r"\b[a-zA-Z_][a-zA-Z0-9_]*\b"),
     ("NUMBER", r"\b\d+(\.\d+)?\b"),
     ("STRING", r'"[^"\n]*"'),
-    ("EQUALS", r"="),
     ("EQ", r"=="),
     ("NE", r"!="),
     ("LE", r"<="),
     ("GE", r">="),
+    ("EQUALS", r"="),
     ("LT", r"<"),
     ("GT", r">"),
     ("NOT", r"!"),
@@ -20,6 +25,7 @@ tokens = [
     ("LPAREN", r"\("),
     ("RPAREN", r"\)"),
     ("WHITESPACE", r"[ \t]+"),
+    ("ID", r"\b[a-zA-Z_][a-zA-Z0-9_]*\b"),
 ]
 
 token_regex = [(nombre, re.compile(patron)) for nombre, patron in tokens]
@@ -33,7 +39,9 @@ def analizar_linea(linea, numero_linea):
             if match:
                 lexema = match.group()
                 if nombre == "WHITESPACE":
-                    pass  # Ignorar espacios
+                    pass
+                elif nombre == "ID" and lexema in palabras_reservadas:
+                    print(f"✔ Token 'RESERVADA' reconocido: '{lexema}' (Línea {numero_linea})")
                 else:
                     print(f"✔ Token '{nombre}' reconocido: '{lexema}' (Línea {numero_linea})")
                 i = match.end()
