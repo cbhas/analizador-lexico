@@ -1,13 +1,13 @@
 
-# 🧠 Analizador Léxico en Python
+# Analizador Léxico en Python
 
 Este proyecto es un **analizador léxico** que identifica y clasifica los distintos **tokens** usados en un archivo fuente personalizado. Desarrollado como parte del curso de Compiladores.
 
-## 📌 Objetivo
+## Objetivo
 
 Leer un archivo llamado `fuente.txt`, línea por línea, y detectar elementos léxicos como identificadores, palabras clave (`print`, `var`, `if`, etc.), operadores, símbolos, números y cadenas. Muestra en consola los tokens reconocidos y señala los errores léxicos cuando aparecen símbolos no válidos.
 
-## 📁 Estructura
+## Estructura
 
 ```
 analizador/
@@ -16,7 +16,7 @@ analizador/
 └── README.md        # Este archivo
 ```
 
-## ▶️ Cómo ejecutar
+## Cómo ejecutar
 
 1. Asegúrate de tener Python instalado.
 2. Coloca tu código Python como `analizador.py`.
@@ -29,7 +29,7 @@ python analizador.py
 
 ---
 
-## 🔍 Tokens que reconoce
+## Tokens que reconoce
 
 | Token        | Significado                        | Ejemplo                |
 |--------------|------------------------------------|------------------------|
@@ -50,7 +50,7 @@ python analizador.py
 
 ---
 
-## 📄 Ejemplo de entrada (`fuente.txt`)
+## Ejemplo de entrada (`fuente.txt`)
 
 ```plaintext
 start_main
@@ -120,7 +120,7 @@ endmain
 
 ---
 
-## 🧪 Resultado esperado
+## Resultado esperado
 
 Al ejecutar el código, se imprime en consola algo así:
 
@@ -136,7 +136,7 @@ Al ejecutar el código, se imprime en consola algo así:
 
 ---
 
-## ⚠️ Notas finales
+## Notas finales
 
 - Los espacios en blanco son ignorados.
 - Se marcan como errores los caracteres no definidos en los patrones de `tokens`, como `,`.
