@@ -55,3 +55,5 @@ with open("fuente.txt", "r", encoding="utf-8") as archivo:
         analizar_linea(linea.strip(), num_linea)
 
 # cbhas
+
+# p_r to to_reg def ana_li i wh mat = no for nom, pat matc = patr if mat lexe if nom pas elif no pass elif nom print els pri i = bre if no pri i wit for anali_line
