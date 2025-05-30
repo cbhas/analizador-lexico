@@ -50,6 +50,12 @@ python analizador.py
 
 ---
 
+## Autómata del Lenguaje
+A continuación se presenta el autómata diseñado para reconocer los tokens válidos del lenguaje:
+![alt text](image.png)
+
+---
+
 ## Ejemplo de entrada (`fuente.txt`)
 
 ```plaintext
@@ -145,5 +151,5 @@ Al ejecutar el código, se imprime en consola algo así:
 ---
 
 🧑‍💻 **Desarrollado por**: Sebastián Calderón  
-📚 **Materia**: Teoria de Autømatas y Compiladores  
+📚 **Materia**: Teoria de Autómatas y Compiladores  
 🏫 **Universidad Técnica Particular de Loja**
