@@ -1,4 +1,63 @@
-print "Hola mundo";
-x = 23 + 5;
-y = "cadena de texto";
-z = x + 10;
+start_main
+    / Declaracion de variables con diferentes tipos
+    var number = int, 10
+    var text = string, "Sebastián Calderón"
+    var flag = bool, true
+    var counter = int, 0
+    var pi = double, 3.14
+    var name = string, "Boteo"
+
+    / Ciclo que cuenta hasta 5
+    loop counter < 5
+        counter + 1 = counter
+    endloop
+
+    / Condicional basico
+    if flag == true
+        "flag is true" = text
+    endif
+
+    / Asignacion y uso de variables float
+    number + pi = number
+    show(number)
+
+    / Condicional con else (simulado con otro if)
+    if number > 13
+        "number is big" = text
+        show(text)
+    endif
+
+    / Segundo ciclo: impresión repetida
+    var i = int, 0
+    loop i < 3
+        "Loop #" = text
+        show(text)
+        i + 1 = i
+    endloop
+
+    / Condicional anidado
+    if number >= 13
+        if flag == true
+            "Valid number and flag" = text
+            show(text)
+        endif
+    endif
+
+    / Operaciones con booleanos y strings
+    "Hola " = text
+    text + name = text
+    show(text)
+
+    / Condiciones con comparadores diferentes
+    if counter != 0
+        "Counter is not zero" = text
+        show(text)
+    endif
+
+    / Operaciones matematicas
+    number * 2 = number
+    number - 5 = number
+    number / 3 = number
+    show(number)
+
+endmain
