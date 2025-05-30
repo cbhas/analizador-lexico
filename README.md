@@ -1,30 +1,30 @@
-oye el ultimo readme no parece a este
-# Analizador Léxico en Python
+# Analizador Léxico en PythonMore actions
 
 Este proyecto es un **analizador léxico** que identifica y clasifica los distintos **tokens** usados en un archivo fuente personalizado. Desarrollado como parte del curso de Compiladores.
 
 ## Objetivo
 
-Leer un archivo llamado fuente.txt, línea por línea, y detectar elementos léxicos como identificadores, palabras clave (print, var, if, etc.), operadores, símbolos, números y cadenas. Muestra en consola los tokens reconocidos y señala los errores léxicos cuando aparecen símbolos no válidos.
+Leer un archivo llamado `fuente.txt`, línea por línea, y detectar elementos léxicos como identificadores, palabras clave (`print`, `var`, `if`, etc.), operadores, símbolos, números y cadenas. Muestra en consola los tokens reconocidos y señala los errores léxicos cuando aparecen símbolos no válidos.
 
 ## Estructura
 
+```
 analizador/
-├── analizador.py    # Código del analizador léxico (el que compartiste)
-├── fuente.txt       # Archivo fuente que será analizado
-└── README.md        # Este archivo
-
+├── analizador.py
+├── fuente.txt
+└── README.md
+```
 
 ## Cómo ejecutar
 
 1. Asegúrate de tener Python instalado.
-2. Coloca tu código Python como analizador.py.
-3. Asegúrate de tener el archivo fuente.txt con contenido válido.
+2. Coloca tu código Python como `analizador.py`.
+3. Asegúrate de tener el archivo `fuente.txt` con contenido válido.
 4. Ejecuta desde consola:
 
-bash
+```bash
 python analizador.py
-
+```
 
 ---
 
@@ -61,9 +61,9 @@ A continuación se presenta el autómata diseñado para reconocer los tokens vá
 
 ---
 
-## Ejemplo de entrada (fuente.txt)
+## Ejemplo de entrada (`fuente.txt`)
 
-plaintext
+```plaintext
 start_main
     / Declaracion de variables con diferentes tipos
     var number = int, 10
@@ -127,7 +127,7 @@ start_main
     show(number)
 
 endmain
-
+```
 
 ---
 
@@ -135,6 +135,7 @@ endmain
 
 Al ejecutar el código, se imprime en consola algo así:
 
+```
 ✔ Token 'ID' reconocido: 'start_main' (Línea 1)
 ✔ Token 'DIVIDE' reconocido: '/' (Línea 2)
 ✔ Token 'ID' reconocido: 'Declaracion' (Línea 2)
@@ -142,18 +143,11 @@ Al ejecutar el código, se imprime en consola algo así:
 ❌ Error léxico en línea 3: ','
 ✔ Token 'NUMBER' reconocido: '10' (Línea 3)
 ...
-
+```
 
 ---
 
 ## Notas finales
-
-- Los espacios en blanco son ignorados.
-- Se marcan como errores los caracteres no definidos en los patrones de tokens, como ,.
-- Puedes personalizar el código para aceptar más estructuras o palabras clave.
-
----
-
-🧑‍💻 **Desarrollado por**: Sebastián Calderón  
-📚 **Materia**: Teoria de Autómatas y Compiladores  
+🧑‍💻 **Desarrollado por**: Sebastián Calderón B.<br>
+📚 **Materia**: Teoria de Autómatas y Compiladores<br>
 🏫 **Universidad Técnica Particular de Loja**
